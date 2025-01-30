@@ -80,7 +80,7 @@
     <main>
         <!-- hero section -->
         <div
-        class="min-h-[110vh] container mx-auto"
+        class="min-h-[110vh] container mx-auto py-[20px]"
         style="background-image: url(c1-assets/cat-big.png);background-repeat: no-repeat; background-size: cover; background-position: bottom center;">
         <div class=""></div>
         <div class="flex h-[90vh] items-center">
@@ -91,8 +91,9 @@
           </div>
         </div>
       </div>
+
       <!-- card section -->
-       <section class="container mx-auto py-16">
+       <section class="container mx-auto py-[60px]">
          <h2 class="text-2xl font-bold mb-12">Browse By Categories</h2>
          <!-- cards -->
          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -134,8 +135,9 @@
             </div>
          </div>
        </section>
+
        <!-- trending section -->
-        <section class="container mx-auto">
+        <section class="container mx-auto py-[60px]">
              <!-- text -->
               <h1 class="text-2xl font-bold mb-12">Trending Pet Products</h1>
               <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -283,8 +285,9 @@
                 </div>
               </div>
         </section>
+
         <!-- low price section -->
-         <section class="container mx-auto">
+         <section class="container mx-auto py-[60px]">
           <h1 class="text-2xl font-bold">Everyday low Price</h1>
           <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
             <!-- left div -->
@@ -305,16 +308,43 @@
              </div
              <!-- right div -->
               <div class="box-border border-2 rounded-xl bg-[#fcebba] lg:col-span-5">
-                <div>
+                <div class="flex">
                   <!-- text -->
+                   <div class="pt-12 pl-11">
+                    <h3 class="text-3xl font-bold mb-2">T-Shirt for Dogs</h3>
+                    <h1 class="text-5xl font-bold text-[#ffdc26]">$7.99</h1>
+                   </div>
+                   <!-- img -->
+                    <div class="mt-24">
+                      <img src="c1-assets/cute-pet-mid.png" alt="">
+                    </div>
                 </div>
               </div>
           </div>
          </section>
     </main>
     <!-- footer section -->
-    <footer>
 
+    <footer class="bg-yellow-300 py-[60px] mt-[200px]">
+      <!-- CTA section -->
+      <section class="container mx-auto -mt-60">
+        <div class="hero bg-base-200">
+          <div class="hero-content flex-col lg:flex-row">
+            <img
+              src="c1-assets/cute-pet-mid.png"
+              class="max-w-sm rounded-lg shadow-2xl" />
+            <div>
+              <h1 class="text-5xl font-bold"></h1>
+              <p class="py-6">Exclusive training tips, ticks, product deals and more.</p>
+              <button class="btn btn-primary">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- actual footer -->
+      <section>
+
+      </section>
     </footer>
 </body>
 </html>
