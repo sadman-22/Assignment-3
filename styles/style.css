@@ -2,16 +2,40 @@
 .sora-font{
     font-family: "Sora", serif;
   }
-    @keyframes zoomIn {
-        from {
-            transform: scale(0.5);
-            opacity: 0;
-        }
-        to {
-            transform: scale(1);
-            opacity: 1;
-        }
+  /* @keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
     }
-    .animate-zoomIn {
-        animation: zoomIn 1s ease-out;
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
+}
+
+.animate-zoomIn {
+    animation: zoomIn 1s ease-out infinite alternate;
+} */
+
+
+.switch-text {
+    display: inline-block;
+    overflow: hidden;
+    height: 1em; /* Adjust based on font size */
+    vertical-align: bottom;
+    position: relative;
+}
+
+.switch-text span {
+    display: block;
+    animation: switchText 6s infinite;
+}
+
+@keyframes switchText {
+    0%, 20% { transform: translateY(0); }
+    25%, 45% { transform: translateY(-100%); }
+    50%, 70% { transform: translateY(-200%); }
+    75%, 95% { transform: translateY(-300%); }
+    100% { transform: translateY(0); }
+}
+
