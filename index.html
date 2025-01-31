@@ -26,7 +26,7 @@
 </head>
 <body class="sora-font">
     <!-- header section -->
-    <header class="container mx-auto">
+    <header class="container mx-auto border-b-2 md:border-b-0">
         <!-- navbar -->
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -52,6 +52,8 @@
                   <li><a>Find a pet</a></li>
                   <li><a href="">Breeds</a></li>
                   <li><a>Contact us</a></li>
+                  <button class="btn btn-outline btn-warning md:hidden">Login</button>
+                  <button class="btn btn-warning md:block">Register</button>
                 </ul>
               </div>
               <div class="flex justify-center items-center gap-2">
@@ -68,11 +70,13 @@
               </ul>
             </div>
             <!-- navbar end -->
-            <div class="navbar-end gap-2">
+            <div class="navbar-end flex gap-3">
+              <div class="flex gap-5">
                 <i class="fa-regular fa-bell"></i>
                 <i class="fa-solid fa-magnifying-glass"></i>
-              <button class="btn btn-outline btn-warning">Login</button>
-              <button class="btn btn-warning">Register</button>
+              </div>
+              <button class="btn btn-outline btn-warning hidden md:block">Login</button>
+              <button class="btn btn-warning hidden md:block">Register</button>
             </div>
           </div>
     </header>
@@ -80,20 +84,32 @@
     <main>
         <!-- hero section -->
         <div
-        class="min-h-[110vh] container mx-auto py-[20px]"
+        class="min-h-[110vh] container mx-auto py-[20px] hidden md:block"
         style="background-image: url(c1-assets/cat-big.png);background-repeat: no-repeat; background-size: cover; background-position: bottom center;">
         <div class=""></div>
         <div class="flex h-[90vh] items-center">
           <div class="max-w-2xl">
-            <h1 class="mb-5 text-5xl font-bold leading-[4rem]">Pamper Your Pet, Because They Deserve the Bes</h1>
+            <h1 class="mb-5 text-5xl font-bold leading-[4rem] animate-zoomIn">Pamper Your Pet, Because They Deserve the Bes</h1>
             <p class="mb-5">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
             <button class="btn btn-warning">Find a pets</button>
           </div>
         </div>
       </div>
-
+      <!-- hero for mobile -->
+      <div
+      class="min-h-[110vh] container mx-auto py-[20px] md:hidden p-5">
+      <div class=""></div>
+      <div class="flex items-center">
+        <div class="max-w-2xl">
+          <h1 class="mb-5 text-4xl font-bold leading-[3rem]">Pamper Your Pet, Because They Deserve the Bes</h1>
+          <p class="mb-5">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
+          <button class="btn btn-warning">Find a pets</button>
+          <img src="c1-assets/cat-big.png" alt="">
+        </div>
+      </div>
+    </div>
       <!-- card section -->
-       <section class="container mx-auto py-[60px]">
+       <section class="container mx-auto py-[60px] p-5">
          <h2 class="text-2xl font-bold mb-12">Browse By Categories</h2>
          <!-- cards -->
          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -137,10 +153,10 @@
        </section>
 
        <!-- trending section -->
-        <section class="container mx-auto py-[60px]">
+        <section class="container mx-auto py-[60px] p-5">
              <!-- text -->
               <h1 class="text-2xl font-bold mb-12">Trending Pet Products</h1>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="grid grid-cols-1 md:grid-cols-3 md:gap-6">
                 <!-- left div -->
                 <div class="bg-[#f9df8a] h-96 rounded-lg flex flex-col">
                     <!-- text -->
@@ -150,12 +166,12 @@
                         <button class="btn btn-outline bg-white text-black border-none">Shop Now</button>
                       </div>
                     <!-- image -->
-                     <div class="flex justify-end p-6 -mt-56 z-10">
-                      <img class="" src="c1-assets/cute-pet-small.png" alt="">
+                     <div class="flex justify-end -mt-40 md:p-6 md:-mt-44 z-10">
+                      <img class="h-[250px]" src="c1-assets/cute-pet-small.png" alt="">
                      </div>
                 </div>
                 <!-- right div -->
-                <div class="col-span-2 gap-4 grid grid-cols-2 md:grid-cols-3">
+                <div class="col-span-2 gap-4 grid grid-cols-2 mt-7 md:mt-0 md:grid-cols-3">
                   <!-- card 1 -->
                   <div class="box-border border-2 flex h-28 justify-center items-center gap-4 rounded-xl">
                     <img class="h-12 w-12" src="c1-assets/dog-cartoon.png" alt="">
@@ -269,32 +285,34 @@
                     </div>
                   </div>
                   <!-- card 9 -->
-                  <div class="box-border border-2 flex h-28 justify-center items-center gap-4 rounded-xl">
-                    <img class="h-12 w-12" src="c1-assets/rabbit-cartoon.png" alt="">
-                    <div class="flex flex-col">
-                      <div class="flex gap-1 items-center">
-                        <i class="fa-solid fa-star text-[#ffc107]"></i>
-                        <p>4.5</p>
+                   <div class="hidden md:block">
+                    <div class="box-border border-2 flex h-28 justify-center items-center gap-4 rounded-xl">
+                      <img class="h-12 w-12" src="c1-assets/rabbit-cartoon.png" alt="">
+                      <div class="flex flex-col">
+                        <div class="flex gap-1 items-center">
+                          <i class="fa-solid fa-star text-[#ffc107]"></i>
+                          <p>4.5</p>
+                        </div>
+                       <div>
+                        <h3 class="text-xl font-bold">Pet Bed</h3>
+                        <p class="text-sm">$39.99</p>
+                       </div>
                       </div>
-                     <div>
-                      <h3 class="text-xl font-bold">Pet Bed</h3>
-                      <p class="text-sm">$39.99</p>
-                     </div>
                     </div>
-                  </div>
+                   </div>
                 </div>
               </div>
         </section>
 
         <!-- low price section -->
-         <section class="container mx-auto py-[60px]">
+         <section class="container mx-auto py-[60px] p-5">
           <h1 class="text-2xl font-bold mb-12">Everyday low Price</h1>
           <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
             <!-- left div -->
              <div class="box-border border-2 rounded-xl bg-gradient-to-br from-pink-200 to-blue-200 lg:col-span-7">
-              <div class="flex justify-between items-center">
+              <div class="flex flex-col md:flex-row md:justify-between md:items-center">
                 <!-- text -->
-                 <div class="p-20">
+                 <div class="pt-12 pl-11 md:p-20">
                   <p class="font-bold mb-3 hidden md:block">Under Prices</p>
                   <h3 class="text-2xl font-bold mb-2">Pet Grooming Mitt</h3>
                   <h4 class="text-xl font-bold text-white mb-4 hidden md:block">(Easy Hair Removal)</h4>
@@ -302,10 +320,10 @@
                  </div>
                  <!-- img -->
                   <div>
-                    <img src="c1-assets/cute-dog-mid.png" alt="">
+                    <img class="" src="c1-assets/cute-dog-mid.png" alt="">
                   </div>
               </div>
-             </div
+            </div>
              <!-- right div -->
               <div class="box-border border-2 rounded-xl bg-gradient-to-br from-[#FFF9F4] to-[#F9DF8A] lg:col-span-5">
                 <div class="flex">
@@ -323,7 +341,8 @@
           </div>
          </section>
          <!-- quick ans section -->
-          <section class="container mx-auto py-[60px]">
+          <section class="container mx-auto py-[60px] p-5">
+            <h1 class="text-3xl font-bold mb-7">Frequently ask question</h1>
             <div class="collapse collapse-arrow bg-base-200">
               <input type="radio" name="my-accordion-2" checked="checked" />
               <div class="collapse-title text-xl font-medium">🐶 Best dog food?</div>
@@ -367,12 +386,12 @@
 
     <footer class="bg-yellow-200 py-[60px] mt-[200px]">
       <!-- CTA section -->
-      <section class="container mx-auto -mt-64">
+      <section class="container mx-auto -mt-64 p-5">
         <div class=" border-2 border-none rounded-xl hero bg-white">
           <div class="hero-content flex-col lg:flex-row">
             <img
               src="c1-assets/cute-pet-mid.png"
-              class="max-w-sm mr-32" />
+              class="max-w-sm" />
             <div>
               <h1 class="text-5xl font-bold">Get Pawsome News!</h1>
               <p class="py-6">Exclusive training tips, ticks, product deals and more.</p>
@@ -404,7 +423,7 @@
           </nav>
           <nav>
             <h6 class="footer-title mt-32">Follow Us</h6>
-            <div class="">
+            <div class="flex gap-3">
               <i class="fa-brands fa-facebook"></i>
               <i class="fa-brands fa-instagram"></i>
               <i class="fa-brands fa-linkedin"></i>
